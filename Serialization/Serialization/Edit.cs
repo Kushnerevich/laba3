@@ -29,5 +29,35 @@ namespace Serialization
         {
             label5.Text = LastProperty;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Animals[Number].Weight=textBox1.Text;
+            Animals[Number].Growth=textBox2.Text;
+            Animals[Number].ColorOfEyes=textBox3.Text;
+            Animals[Number].TypeOfFood = textBox4.Text;
+
+            string type = Animals[Number].TypeOfFood;
+            switch (type)
+            {
+                case "Mammals":
+                    Animals[Number].Hairline = textBox5.Text;
+                    break;
+                case "Birds":
+                    Animals[Number].ColorOfPlumage = textBox5.Text;
+                    break;
+                case "Fishs":
+                    Animals[Number].ColorOfScales = textBox5.Text;
+                    break;
+                case "Insect":
+                    Animals[Number].GroupOfInsects = textBox5.Text;
+                    break;
+                case "Reptiles":
+                    Animals[Number].Sex = textBox5.Text;
+                    break;
+            }
+            MainForm.ShowTable();
+            this.Dispose();
+        }
     }
 }

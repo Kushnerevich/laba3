@@ -163,37 +163,37 @@ namespace Serialization
             MessageBox.Show("Выберите строку которую хотите изменить в таблице.");
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (radioButton1.Checked)
             {
-                    int numToChange = e.RowIndex;
-                    string LastPropety="";
-                    string type = Animals[numToChange].type;
+                int numToChange = e.RowIndex;
+                string LastPropety = "";
+                string Type = Animals[numToChange].TypeOfAnimal;
 
-                    switch (type)
-                    {
-                        case "Mammals":
-                            LastPropety = "Волосяной покров";
-                            break;
-                        case "Birds":
-                            LastPropety = "Цвет оперения";
-                            break;
-                        case "Fishs":
-                            LastPropety = "Цвет чешуи";
-                            break;
-                        case "Insect":
-                            LastPropety = "Группы насекомых";
-                            break;
-                        case "Reptiles": 
-                            LastPropety = "Пол";
-                            break;
-                    }
-                    Edit ChangeForm = new Edit(Animals, numToChange, this, LastPropety);
-
-               }
-           }
-       }
+                switch (Type)
+                {
+                    case "Mammals":
+                        LastPropety = "Волосяной покров";
+                        break;
+                    case "Birds":
+                        LastPropety = "Цвет оперения";
+                        break;
+                    case "Fishs":
+                        LastPropety = "Цвет чешуи";
+                        break;
+                    case "Insect":
+                        LastPropety = "Группы насекомых";
+                        break;
+                    case "Reptiles":
+                        LastPropety = "Пол";
+                        break;
+                }
+                Edit ChangeForm = new Edit(Animals, numToChange, this, LastPropety);
+                ChangeForm.Show();
+              }
+        }
+   }
 }
 
             

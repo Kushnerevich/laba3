@@ -115,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(131, 141);
+            this.label5.Location = new System.Drawing.Point(115, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 9;
@@ -128,6 +128,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Изменить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Edit
             // 
