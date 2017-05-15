@@ -57,7 +57,6 @@ namespace Serialization
 
             if (Animals.Count != 0)
             {
-
                 dataGridView1.ColumnCount = 5;
                 dataGridView1.RowCount = Animals.Count;
 
@@ -104,7 +103,6 @@ namespace Serialization
             mySaveFileDialog.FilterIndex = 1;
             mySaveFileDialog.RestoreDirectory = true;
             mySaveFileDialog.FileName = "Animals";
-
             if (mySaveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Stream mystream = mySaveFileDialog.OpenFile();
@@ -153,5 +151,51 @@ namespace Serialization
                 }
             }
         }
-    }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Animals.Clear();
+            dataGridView1.Rows.Clear();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Выберите строку которую хотите изменить в таблице.");
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                    int numToChange = e.RowIndex;
+                    string LastPropety="";
+                    string type = Animals[numToChange].type;
+
+                    switch (type)
+                    {
+                        case "Mammals":
+                            LastPropety = "Волосяной покров";
+                            break;
+                        case "Birds":
+                            LastPropety = "Цвет оперения";
+                            break;
+                        case "Fishs":
+                            LastPropety = "Цвет чешуи";
+                            break;
+                        case "Insect":
+                            LastPropety = "Группы насекомых";
+                            break;
+                        case "Reptiles": 
+                            LastPropety = "Пол";
+                            break;
+                    }
+                    Edit ChangeForm = new Edit(Animals, numToChange, this, LastPropety);
+
+               }
+           }
+       }
 }
+
+            
+        
+

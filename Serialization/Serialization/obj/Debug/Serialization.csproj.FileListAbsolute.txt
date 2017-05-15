@@ -6,3 +6,4 @@ F:\ООП\Serilitation\Serialization\Serialization\obj\Debug\Serialization.Prope
 F:\ООП\Serilitation\Serialization\Serialization\obj\Debug\Serialization.csproj.GenerateResource.Cache
 F:\ООП\Serilitation\Serialization\Serialization\obj\Debug\Serialization.exe
 F:\ООП\Serilitation\Serialization\Serialization\obj\Debug\Serialization.pdb
+F:\ООП\Serilitation\Serialization\Serialization\obj\Debug\Serialization.Edit.resources
